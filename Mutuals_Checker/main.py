@@ -46,19 +46,22 @@ class Mutuals:
         user_1_friend_count = self.calculateAmount(self.friends_1)
         user_2_friend_count = self.calculateAmount(self.friends_2)
 
-        print("DATA\n")
+        print("\nDATA\n")
         print("===========")
 
         print("User 1 Friend Count: " + str(user_1_friend_count) + "\n")
         print("User 2 Friend Count: " + str(user_2_friend_count) + "\n")
 
         print("\nMutual Friends\n")
+        print("=====================\n")
 
         mutuals = self.get_mutuals()
 
         for mutual in mutuals:
             print(mutual)
 
-for ids in ids_to_check:
-    mutuals = Mutuals(ids[0], ids[1])
-    mutuals.print_users_info()
+# Main Method
+if __name__ == "__main__":
+    for ids in ids_to_check:
+        mutuals = Mutuals(ids[0], ids[1])
+        mutuals.print_users_info()
